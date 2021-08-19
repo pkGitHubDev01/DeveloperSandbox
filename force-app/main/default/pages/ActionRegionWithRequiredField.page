@@ -1,0 +1,60 @@
+<apex:page controller="ActionRegionWithRequiredField">
+  <apex:form >
+      <apex:pageBlock >
+          <apex:pageBlockButtons >
+              <apex:commandButton value="Save" action="{!Save}"/>
+          </apex:pageBlockButtons>
+          <apex:pageBlockSection title="Account section">
+              <apex:pageBlockSectionItem >
+                  <apex:outputText > Account Name</apex:outputText>
+                  <apex:inputField value="{!objAccount.Name}" required="true"/>
+              </apex:pageBlockSectionItem>
+              <apex:pageBlockSectionItem >
+                  <apex:outputText > AddContacts </apex:outputText>
+                 <apex:actionRegion >
+                      <apex:outputPanel >
+                          <apex:inputCheckbox value="{!IsContact}">
+                              <apex:actionSupport event="onchange" reRender="SecondSection"/>
+                          </apex:inputCheckbox>
+                      </apex:outputPanel>
+                  </apex:actionRegion>
+              </apex:pageBlockSectionItem>
+          </apex:pageBlockSection>
+          
+          <apex:outputPanel id="SecondSection">
+                  <apex:pageBlockSection rendered="{!if(IsContact == true,true,false)}" title="Contacts" columns="3">
+                      <apex:pageBlockSectionItem >
+                          <apex:commandButton value="Add" action="{!Add}" reRender="SecondSection" immediate="true"/>
+                          <apex:commandButton value="Delete" action="{!DeleteRow}"/>
+                      </apex:pageBlockSectionItem>
+                      <apex:pageBlockSectionItem >
+                          <apex:outputText >&nbsp;</apex:outputText>
+                          <apex:outputText >&nbsp;</apex:outputText>
+                      </apex:pageBlockSectionItem>
+                      <apex:pageBlockSectionItem >
+                          <apex:outputText >&nbsp;</apex:outputText>
+                          <apex:outputText >&nbsp;</apex:outputText>
+                      </apex:pageBlockSectionItem>
+                      <apex:repeat value="{!lstWrapContact}" var="wrap">
+                          <apex:pageBlockSectionItem >
+                              <apex:outputText >Check</apex:outputText>
+                              <apex:inputCheckbox value="{!wrap.IsDelete}"/>
+                          </apex:pageBlockSectionItem>
+                          <apex:pageBlockSectionItem >
+                              <apex:outputText > First </apex:outputText>
+                              <apex:inputField value="{!wrap.objContact.FirstName}" required="true"/>
+                          </apex:pageBlockSectionItem>
+                          <apex:pageBlockSectionItem >
+                              <apex:outputLink value="http://google.com/search">
+                                 Search Google
+                                <apex:param name="q" value="{!wrap.objContact.name}"/>
+                               </apex:outputLink>  
+                              <apex:inputField value="{!wrap.objContact.LastName}" required="true"/>
+                          </apex:pageBlockSectionItem>
+                          
+                      </apex:repeat>
+                  </apex:pageBlockSection>
+          </apex:outputPanel>    
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

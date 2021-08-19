@@ -1,0 +1,9 @@
+<apex:page showHeader="false" sidebar="false">
+  <apex:pageBlock >
+  
+          <div id="seconddiv" style="margin-top: 10%;margin-bottom: 10%;font-size: 30px;font-family: calibri;font-weight: bold;text-align: center;">
+              Your request is in progress status. support agent are working on your request. 
+          </div> 
+  
+  </apex:pageBlock>
+</apex:page>

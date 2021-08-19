@@ -1,0 +1,18 @@
+<aura:component implements="force:lightningQuickAction">
+    <aura:attribute name="expense" type="Expense__c" default="{ 'sobjectType': 'Expense__c','Name': ''}"/>
+    
+    <!-- Input Form using components -->
+  <div class="container">
+    <form class="slds-form--stacked">
+      <div class="slds-form-element slds-is-required">
+        <div class="slds-form-element__control">
+          <ui:inputText aura:id="expname" label="Expense Name"
+                        class="slds-input"
+                        labelClass="slds-form-element__label"
+                        value="{!v.newExpense.Name}"
+                        required="true"/>
+         </div>
+       </div>
+      </form>
+    </div>  
+</aura:component>

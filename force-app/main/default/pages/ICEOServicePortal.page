@@ -1,0 +1,74 @@
+<apex:page showHeader="false" sidebar="false">
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8"/>
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+        <input type="hidden" name="orgid" value="00D28000000dQtU"/>
+        <input type="hidden" name="retURL" value="https://serviceclouddt7-developer-edition.ap7.force.com/apex/SuccessForm"/>
+        
+<apex:pageBlock title="ICEO Help Portal">
+    <apex:pageBlockSection columns="2">
+        <apex:pageBlockSectionItem >
+            <apex:outputText > Contact Name </apex:outputText>
+           <!-- <label for="name">Contact Name</label> -->
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSection >
+            <input  id="name" maxlength="80" name="name" size="20" type="text" required="required"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection >
+            <label for="email">Email</label>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <input  id="email" maxlength="80" name="email" size="20" type="text" required="required"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection >
+            <label for="phone">Phone</label>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <input  id="phone" maxlength="40" name="phone" size="20" type="text" />
+        </apex:pageBlockSection>
+        
+        
+        
+        <apex:pageBlockSection >
+            <label for="subject">Subject</label>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <input  id="subject" maxlength="80" name="subject" size="20" type="text" required="required"/>
+        </apex:pageBlockSection>
+        
+        
+        
+        <apex:pageBlockSection >
+            <label for="description">Description</label>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <textarea name="description" required="required" rows="10" cols="100"></textarea>
+        </apex:pageBlockSection>
+        
+        
+        
+        <apex:pageBlockSection >
+            <input type="hidden"  id="external" name="external" value="1" />
+        </apex:pageBlockSection>
+        
+         <apex:pageBlockSection >
+            <input type="hidden"  id="00N0I00000K6C9T" name="00N0I00000K6C9T" value="ICEO" />
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection >
+                    <input type="submit" name="submit"/>
+        </apex:pageBlockSection>
+
+        
+    </apex:pageBlockSection>
+</apex:pageBlock>
+</form>
+</apex:page>

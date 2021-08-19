@@ -1,0 +1,20 @@
+<apex:page controller="FileUploadTest">
+    <apex:form id="First">
+        
+    </apex:form>
+   
+    <apex:form id="Second" style="display:none;">
+        <apex:pageBlock >
+            <apex:pageblockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel > Upload Image1 </apex:outputLabel>
+                    <apex:inputFile value="{!Attachment1}" title="Upload Image1"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel > Upload Image2 </apex:outputLabel>
+                    <apex:inputFile value="{!Attachment2}" title="Upload Image2"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageblockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

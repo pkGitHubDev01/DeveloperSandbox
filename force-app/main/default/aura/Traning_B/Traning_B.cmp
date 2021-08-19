@@ -1,0 +1,4 @@
+<aura:component >
+	<aura:registerEvent name="sampleComponentEvent" type="c:Event_C"/>
+ 	<ui:button label="Fire Event" press="{!c.fire12}"/>
+</aura:component>

@@ -1,0 +1,32 @@
+<aura:component  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <!-- Atrributes -->
+    <aura:attribute name="AtrStudentName" type="string" default="" />
+    <aura:attribute name="AtrGender" type="string" default="" />
+    <aura:attribute name="AtrFatherName" type="string" default="" />
+    <aura:attribute name="AtrMotherName" type="string" default="" />
+    <!-- Student registration Form -->
+	
+    <div class="slds-page-header">
+        <div class="slds-align--absolute-center">
+            <div class="slds-text-heading_large">
+            Student Registration Form
+            </div>    
+        </div>
+    </div>    
+    
+    <div class="MarginLeft400px slds-size_3-of-8">
+    <lightning:input label="Student Name" name="StudentName"  value="{!v.AtrStudentName}" required="true"/>
+    <lightning:input label="Gender" name="Gender"  value="{!v.AtrGender}" required="true" />
+    <lightning:input label="Father Name" name="FatherName"  value="{!v.AtrFatherName}" required="true"/>
+    <lightning:input label="Mother Name" name="MotherName"  value="{!v.AtrMotherName}" required="true"/>
+    
+    <lightning:select name="select1" label="How many tickets?" required="true">
+            <option value="">choose one...</option>
+            <option value="1">one</option>
+            <option value="2">two</option>
+            <option value="3">three</option>
+    </lightning:select>
+        
+    </div>    
+</aura:component>

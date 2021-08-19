@@ -1,0 +1,14 @@
+<apex:page sidebar="false" showHeader="false">
+
+    <apex:pageblock id="maindiv">
+        
+              <div id="seconddiv" style="margin-top: 10%;margin-bottom: 10%;font-size: 30px;font-family: calibri;font-weight: bold;color: green;text-align: center;">
+                  Congratulations case logged successfully in service portal. <br></br> 
+                  you will receive the request number at your email address.
+              </div>      
+        
+    </apex:pageblock>
+  
+  
+
+</apex:page>

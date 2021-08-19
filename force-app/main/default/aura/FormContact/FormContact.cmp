@@ -1,0 +1,19 @@
+<aura:component controller="ContactController">
+    <aura:attribute name="NewCon" type="Contact" 
+        default="{ 'sobjectType': 'Contact','FirstName' : '','LastName': '','Email': '','Phone': ''}"/>        
+    <form>        
+        <!-- <ui:inputText value="{!v.NewCon.FirstName}" label="First" class="form-control"/> 
+        <ui:inputText value="{!v.NewCon.LastName}" label="Last" class="form-control" />
+        <ui:inputEmail value="{!v.NewCon.Email}" label="Email" class="form-control" />
+        <ui:inputText value="{!v.NewCon.Phone}" label="Phone Number" class="form-control"/> -->
+        
+        <div class="slds-form-element">
+            <div class="slds-form-element__control">
+                <lightning:input aura:id ="NewCon" label="First Name" name="newCon" value="{!v.NewCon.FirstName}"
+                                 required="true"/>                
+            </div>	
+        </div>
+        
+        <ui:button label="Save" press="{!c.save}"/>
+    </form>
+</aura:component>

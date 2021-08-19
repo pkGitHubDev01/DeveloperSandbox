@@ -1,0 +1,125 @@
+<apex:page showHeader="false" sidebar="false">
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8"/>
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+        <input type="hidden" name="orgid" value="00D28000000dQtU"/>
+        <input type="hidden" name="retURL" value="https://serviceclouddt7-developer-edition.ap7.force.com/apex/SuccessForm"/>
+        
+<apex:pageBlock title="Amazon Service Portal">
+    <apex:pageBlockSection columns="2">
+        <apex:pageBlockSectionItem >
+            <apex:outputText > Contact Name </apex:outputText>
+           <!-- <label for="name">Contact Name</label> -->
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSection >
+            <input  id="name" maxlength="80" name="name" size="20" type="text" Required="Required"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection >
+            <label for="email">Email</label>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <input  id="email" maxlength="80" name="email" size="20" type="text" Required="Required"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection >
+            <label for="phone">Phone</label>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <input  id="phone" maxlength="40" name="phone" size="20" type="text" />
+        </apex:pageBlockSection>
+        
+        
+        
+        <apex:pageBlockSection >
+            <label for="subject">Subject</label>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <input  id="subject" maxlength="80" name="subject" size="20" type="text" Required="Required"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection >
+            <label for="company">Company</label>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <input  id="company" maxlength="80" name="company" size="20" type="text" Required="Required"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection >
+            <label for="type">Type</label>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <select  id="type" name="type" Required="Required"><option value="">--None--</option><option value="Mechanical">Mechanical</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Electronic">Electronic</option>
+            <option value="Structural">Structural</option>
+            <option value="Other">Other</option>
+            </select>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection >
+            <label for="status">Status</label>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <select  id="status" name="status"><option value="" Required="Required">--None--</option><option value="New">New</option>
+            <option value="Working">Working</option>
+            <option value="Escalated">Escalated</option>
+            <option value="Closed">Closed</option>
+            </select>            
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection >
+            <label for="reason">Case Reason</label>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <select  id="reason" name="reason"><option value="">--None--</option><option value="Installation">Installation</option>
+            <option value="Equipment Complexity">Equipment Complexity</option>
+            <option value="Performance">Performance</option>
+            <option value="Breakdown">Breakdown</option>
+            <option value="Equipment Design">Equipment Design</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Other">Other</option>
+            </select>            
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection >
+            <label for="description">Description</label>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <textarea name="description" Required="Required" rows="10" cols="100"></textarea>
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection >   
+            <label for="priority">Priority</label>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <select  id="priority" name="priority" Required="Required"><option value="">--None--</option><option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+            </select>
+        </apex:pageBlockSection>
+        
+        
+        <apex:pageBlockSection >
+            <input type="hidden"  id="external" name="external" value="1" />
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection >
+            <input type="hidden"  id="00N0I00000K6C9T" name="00N0I00000K6C9T" value="Amazon" />
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection >
+                    <input type="submit" name="submit"/>
+        </apex:pageBlockSection>
+
+        
+    </apex:pageBlockSection>
+</apex:pageBlock>
+</form>
+</apex:page>

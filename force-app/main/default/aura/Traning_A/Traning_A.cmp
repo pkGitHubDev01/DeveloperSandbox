@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:handler name="sampleComponentEvent" event="c:Event_C" action="{!c.handleComponentEvent}"/>
+   <c:Traning_B />
+</aura:component>
