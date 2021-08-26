@@ -13,6 +13,7 @@ private class AccountManagerTest{
         // Verify results
         System.assert(thisAccount != null);
         System.assertEquals('Test record', thisAccount.Name);
+        
 
     }
 
